@@ -1,0 +1,50 @@
+/* src/components/Header.module.css */
+
+/* keep header above other content */
+.header {
+    z-index: 1030;
+  }
+  
+  /* target bootstrap .nav-link under our navList (use :global to reach bootstrap classes) */
+  .navList :global(.nav-link) {
+    color: #333;
+    transition: color .15s ease, border-bottom .15s ease;
+  }
+  
+  .navList :global(.nav-link):hover {
+    color: #0d6efd;
+  }
+  
+  /* style for the active link (this is a local class applied from JS via styles.active) */
+  .active {
+    color: #0d6efd;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 3px;
+    background: rgba(13,110,253,0.12);
+    border-radius: 2px;
+  }
+  
+  /* CTA small adjustments */
+  .ctaMobile {
+    padding: 0.45rem 0.7rem;
+    font-weight: 600;
+  }
+  
+  /* RTL small fixes: adjust bootstrap spacing when html[dir="rtl"] */
+  :global(html[dir="rtl"]) .navbar-brand {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+  :global(html[dir="rtl"]) .navbar-nav :global(.nav-link) {
+    text-align: right;
+  }
+  
