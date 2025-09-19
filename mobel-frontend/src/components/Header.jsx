@@ -6,7 +6,7 @@ import logo from "../assets/logo.svg";
 
 export default function Header() {
   return (
-    <header className={`${styles.header} shadow-sm`}>
+    <header className={`${styles.header} shadow-sm`}> 
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
         <div className="container">
           {/* Logo */}

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.hero {
+    background-image: url('../../assets/hero.png'); /* Correct way */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;  /* full screen hero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+
+  }
+
+
+
+/*     vision section  */
+
+  .vision {
+ 
+  }
+  .visionContainer{
+    padding: 50px 0; /* top and bottom */
+    background-color: #ffffff;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .visionText {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;       /* Regular */
+    font-size: 32px;
+    line-height: 150%;      /* = 1.5 in CSS */
+    letter-spacing: 0;      /* default, but good to be explicit */
+    text-align: left;       /* matches your Figma alignment */
+    color: #828282;            /* optional: adjust to your design */
+  }
+  
+  /* Vision Image */
+  .visionImg {
+    max-width: 100%;
+    height: auto;
+  }
+
+/*     vision section  */
+ /* Mission Section */
+.mission {
+}
+
+.missionContainer {
+  background-color: #ffffff;
+}
+
+.missionText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;       /* Regular */
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 0;
+  text-align: left;
+  color: #828282;
+}
+
+/* Mission Image */
+.missionImg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* company sector */
+
+
+  
