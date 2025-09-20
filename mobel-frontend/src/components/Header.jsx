@@ -8,7 +8,7 @@ import navBg from "../assets/header.png";
 export default function Header() {
   return (
     <header
-      className={`${styles.header} ${styles.bg} shadow-sm`}
+      className={`${styles.header} ${styles.bg}`} // removed shadow-sm
       style={{ backgroundImage: `url(${navBg})` }}
     >
       <nav className="navbar navbar-expand-lg navbar-dark">
@@ -18,8 +18,8 @@ export default function Header() {
             <img
               src={logo}
               alt="Mobel Polymers"
-              width="40"
-              height="40"
+              width="150"
+              height="150"
               className="me-2 rounded"
             />
           </NavLink>
@@ -82,16 +82,6 @@ export default function Header() {
                 </NavLink>
               </li>
             </ul>
-
-            {/* Actions */}
-            {/* <div className="d-flex align-items-center ms-3">
-              <a
-                href="tel:+201234567890"
-                className="btn btn-outline-light me-2 d-none d-lg-inline-flex align-items-center"
-              >
-                <i className="fas fa-phone-alt me-2"></i> CALL US
-              </a>
-            </div> */}
           </div>
         </div>
       </nav>

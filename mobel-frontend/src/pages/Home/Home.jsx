@@ -40,14 +40,13 @@ import polyesterResin3 from "../../assets/products/polyster-resin3.png";
 export default function Home() {
   return (<>
 
-    <div className="container">
       <div className={styles.hero}>
         <h1>
           Providing solutions that drive innovation <br />
           and support environmental preservation
         </h1>
       </div>
-    </div>
+  
 
 
     {/* ***********  vision  Section  ************ */}

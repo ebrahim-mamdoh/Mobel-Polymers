@@ -6,14 +6,21 @@
     background-position: center;
     min-height: 100vh;  /* full screen hero */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    color: white;
+    color: black;
     text-align: center;
 
   }
-
-
+  .hero h1 {
+    background: rgba(195, 194, 194, 0.5); /* semi-transparent gray/black */
+    color: #000000;                    /* keep text white */
+    display: inline-block;          /* shrink background to fit text */
+    padding: 15px 25px;             /* spacing inside overlay */
+    border-radius: 8px;             /* optional: rounded edges */
+    font-size: 2.5rem;              /* adjust size as you need */
+    line-height: 1.4;
+  }
 
 /*     vision section  */
 

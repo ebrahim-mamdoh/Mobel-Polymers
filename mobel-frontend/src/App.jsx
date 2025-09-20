@@ -19,7 +19,7 @@ function App() {
       <Header />
 
       {/* Pages */}
-      <div style={{ padding: "2rem" }}>
+      <div >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
