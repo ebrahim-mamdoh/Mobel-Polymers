@@ -9,6 +9,8 @@ import Contact from "./pages/Contact/Contact";
 
 // استيراد الـ Header
 import Header from "./components/Header";
+// استيراد الـ Footer
+import Footer from "./components/footer/Footer.jsx";  // 👈 تأكد من المسار
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+
+      {/* Footer في الأسفل */}
+      <Footer />
     </div>
   );
 }

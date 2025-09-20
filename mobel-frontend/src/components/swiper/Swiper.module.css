@@ -1,0 +1,100 @@
+/* ===== Clients Swiper styles ===== */
+.carouselSection {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+  }
+  
+  /* wrapper to control overall width */
+  .clientSwiperWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Swiper container tuning */
+  .clientSwiper {
+    width: 100%;
+    padding: 10px 40px; /* space so arrows don't overlap slides */
+    box-sizing: border-box;
+  }
+  
+  /* each card */
+  .clientCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px; /* adjust if you want taller cards */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    padding: 12px;
+  }
+  
+  /* logo image */
+  .clientCard img {
+    max-width: 100%;
+    max-height: 66px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+  }
+  .clientCard img:hover {
+    transform: scale(1.06);
+  }
+  
+  /* simple arrow buttons (no border) */
+  .arrow {
+    background: transparent;
+    border: none;
+    color: #000000;
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.18s ease;
+    z-index: 20;
+  }
+  
+
+  
+  /* absolute positions for prev/next arrows */
+  .prevArrow {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .nextArrow {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* make sure pagination/navigation icons don't show default swiper styles */
+  .swiper-button-disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  
+  /* responsive small adjustments */
+  @media (max-width: 767px) {
+    .clientCard {
+      height: 76px;
+      padding: 8px;
+    }
+    .clientSwiper {
+      padding: 8px 20px;
+    }
+    .arrow {
+      font-size: 1.3rem;
+    }
+  }
+  

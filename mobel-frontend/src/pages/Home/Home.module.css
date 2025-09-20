@@ -46,7 +46,7 @@
     height: auto;
   }
 
-/*     vision section  */
+
  /* Mission Section */
 .mission {
 }
@@ -57,7 +57,7 @@
 
 .missionText {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;       /* Regular */
+  font-weight: 400;    
   font-size: 32px;
   line-height: 150%;
   letter-spacing: 0;
@@ -74,7 +74,7 @@
 /* company sector */
 
 .sectors {
-    padding: 60px 0;
+    padding: 60px 25px;
     background-color: #ffffff;
   }
   
@@ -87,7 +87,7 @@
   }
   
   .sectorIcon {
-    max-width: 80px;   /* adjust to match your Figma design */
+    max-width: 80px;   
     margin-bottom: 20px;
   }
   
@@ -103,7 +103,7 @@
 
 /* Products Section */
 .products {
-    padding: 60px 0;
+    padding: 60px 25px;
     background-color: #fff;
   }
   

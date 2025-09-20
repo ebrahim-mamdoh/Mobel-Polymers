@@ -3,6 +3,8 @@ import styles from "./Home.module.css"
 import visionImg from "../../assets/vision.png"
 import missionImg from "../../assets/mission.png"
 
+import ClientsCarousel from "../../components/swiper/Swiper.jsx";
+
 import Sectors1 from "../../assets/Sectors1.svg"
 import Sectors2 from "../../assets/Sectors2.svg"
 import Sectors3 from "../../assets/Sectors3.svg"
@@ -201,6 +203,12 @@ export default function Home() {
     </div>
   </section>
 </div>
+
+
+{/* ***********  slider  ************ */}
+
+
+<ClientsCarousel />
 
 
 
