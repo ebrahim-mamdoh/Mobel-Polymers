@@ -3,11 +3,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import logo from "../assets/logo.svg";
+import navBg from "../assets/header.png";
 
 export default function Header() {
   return (
-    <header className={`${styles.header} shadow-sm`}> 
-      <nav className="navbar navbar-expand-lg navbar-light bg-white">
+    <header
+      className={`${styles.header} ${styles.bg} shadow-sm`}
+      style={{ backgroundImage: `url(${navBg})` }}
+    >
+      <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
           {/* Logo */}
           <NavLink className="navbar-brand d-flex align-items-center" to="/">
@@ -18,7 +22,6 @@ export default function Header() {
               height="40"
               className="me-2 rounded"
             />
-            <span className="fw-bold">Mobel Polymers</span>
           </NavLink>
 
           {/* Toggler (mobile) */}
@@ -48,7 +51,6 @@ export default function Header() {
                   Home
                 </NavLink>
               </li>
-
               <li className="nav-item">
                 <NavLink
                   to="/about"
@@ -56,10 +58,9 @@ export default function Header() {
                     "nav-link px-3 " + (isActive ? styles.active : "")
                   }
                 >
-                 About
+                  About
                 </NavLink>
               </li>
-
               <li className="nav-item">
                 <NavLink
                   to="/media-center"
@@ -67,10 +68,9 @@ export default function Header() {
                     "nav-link px-3 " + (isActive ? styles.active : "")
                   }
                 >
-                    Media Center 
+                  Media Center
                 </NavLink>
               </li>
-
               <li className="nav-item">
                 <NavLink
                   to="/contact"
@@ -78,22 +78,20 @@ export default function Header() {
                     "nav-link px-3 " + (isActive ? styles.active : "")
                   }
                 >
-                    Contact
+                  Contact
                 </NavLink>
               </li>
             </ul>
 
             {/* Actions */}
-            <div className="d-flex align-items-center ms-3">
+            {/* <div className="d-flex align-items-center ms-3">
               <a
                 href="tel:+201234567890"
-                className="btn btn-outline-primary me-2 d-none d-lg-inline-flex align-items-center"
+                className="btn btn-outline-light me-2 d-none d-lg-inline-flex align-items-center"
               >
                 <i className="fas fa-phone-alt me-2"></i> CALL US
               </a>
-
-         
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>
