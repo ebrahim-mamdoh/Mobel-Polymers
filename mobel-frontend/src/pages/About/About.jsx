@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./About.module.css";
 import logo from "../../assets/logo.svg"; // تأكد المسار حسب مشروعك
+import Testimonials from "../../components/testimonials/testimonial.jsx";
 
 export default function About() {
-  return (
-    <section className={`container ${styles.aboutSection}`}>
+  return (<>
+    <section className={`container ${styles.aboutSection}`}>  
       <div className="row align-items-center">
         {/* Text column (left on md+) */}
         <div className="col-12 col-md-6">
@@ -44,5 +45,16 @@ export default function About() {
         </div>
       </div>
     </section>
+  
+
+    <Testimonials />
+
+
+  </>
+  
+
+
+
+
   );
 }

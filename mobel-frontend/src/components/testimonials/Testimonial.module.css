@@ -1,0 +1,129 @@
+.testimonials {
+    position: relative;
+    padding: 80px 0;
+    margin-top: 150px;
+  }
+  
+  .testimonials::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 65%;
+    height: 100%;
+    background-color: #f1f0fe;
+    content: '';
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+  }
+  
+  .sectionHeading {
+    margin-bottom: 0;
+    margin-left: 60px;
+    vertical-align: middle;
+  }
+  
+  .sectionHeading p {
+    margin-top: 50px;
+  }
+  
+  /* Slide item */
+  .item {
+    background-color: #72a8d8;
+    border-radius: 25px;
+    padding: 80px;
+    color: #fff;
+  }
+  
+  .item p {
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+  
+  /* Author layout inside slide */
+  .author {
+    display: flex;
+    align-items: center;
+  }
+  
+  .author img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 25px;
+  }
+  
+  .meta h4 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .category {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #fff;
+  }
+  
+  /* ==========================
+     Slick arrows (match old Owl design)
+     ========================== */
+  :global(.slick-prev),
+  :global(.slick-next) {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    z-index: 5;
+    transition: all 0.3s ease;
+  }
+  
+  :global(.slick-prev:before),
+  :global(.slick-next:before) {
+    font-size: 24px;
+    color: #72a8d8; /* اللون الأساسي زي القديم */
+    opacity: 1;
+  }
+  
+  :global(.slick-prev:hover),
+  :global(.slick-next:hover) {
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  }
+  
+  /* مكان الأزرار */
+  :global(.slick-prev) {
+    left: auto;
+    right: 70px;
+    top: 45%;
+  }
+  :global(.slick-next) {
+    right: 15px;
+    top: 45%;
+  }
+  
+  /* ==========================
+     Slick dots
+     ========================== */
+  :global(.slick-dots li button:before) {
+    color: rgba(0,0,0,0.3);
+  }
+  :global(.slick-dots li.slick-active button:before) {
+    color: #72a8d8;
+  }
+  
+  /* responsive tweaks */
+  @media (max-width: 991px) {
+    .sectionHeading { margin-left: 20px; }
+    .testimonials::before { width: 100%; border-radius: 0; left: 0; right: 0; }
+    .item { padding: 40px; }
+  }
+  
