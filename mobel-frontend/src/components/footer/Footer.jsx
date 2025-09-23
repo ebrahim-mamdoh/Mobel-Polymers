@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import footerBg from "../../assets/footer.jpg";
+import footerBg from "../../assets/footer-1.jpg";
 import logo from "../../assets/logo.svg";
 import { FaFacebookF, FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
 
