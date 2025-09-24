@@ -1,0 +1,95 @@
+.mediaCenter {
+  padding: 60px 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* تفاصيل المنتج */
+.productDetails {
+  flex: 2;
+}
+
+.productImage {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.productDetails h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.productDetails p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* القائمة */
+.sidebar {
+  flex: 1;
+}
+
+.sidebar h4 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  border: 1px solid #eee;
+  padding: 12px 15px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.sidebar li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.sidebar li:hover {
+  background: #f9f9f9;
+}
+
+.sidebar li.active {
+  font-weight: 600;
+  border-color: #c0392b;
+}
+
+.sidebar li.active::before {
+  background: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .productImage {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .sidebar {
+    margin-top: 30px;
+  }
+}
