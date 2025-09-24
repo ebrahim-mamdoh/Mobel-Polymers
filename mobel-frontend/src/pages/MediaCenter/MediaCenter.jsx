@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./MediaCenter.module.css";
+
+// استبدل الصور دي باللي عندك في مجلد assets
 import bond from "../../assets/MediaCenter/bond.jpg";
 import Dextrin from "../../assets/MediaCenter/Dextrin.jpg";
 import FastRedGlue from "../../assets/MediaCenter/FastRedGlue.jpg";
@@ -48,12 +50,6 @@ const products = [
   },
   {
     id: 7,
-    name: "Fast Red Quick",
-    description: "Quick-drying adhesive for fast repairs and industrial use.",
-    image: FastRedGlue,
-  },
-  {
-    id: 8,
     name: "Polythane fast spray glue",
     description: "Easy-to-use spray adhesive for multiple surfaces.",
     image: Polythane,
@@ -65,7 +61,8 @@ export default function MediaCenter() {
 
   return (
     <section className={styles.mediaCenter}>
-      <div className={styles.container}>
+      {/* استخدمنا container من Bootstrap + كلاس الموديول */}
+      <div className={`container ${styles.mediaContainer}`}>
         {/* تفاصيل المنتج */}
         <div className={styles.productDetails}>
           <img

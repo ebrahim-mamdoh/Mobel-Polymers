@@ -2,7 +2,8 @@
   padding: 60px 20px;
 }
 
-.container {
+/* استخدمنا mediaContainer عشان مانتعرضش مع bootstrap .container */
+.mediaContainer {
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -14,9 +15,11 @@
 }
 
 .productImage {
-  width: 300px;
+  max-width: 300px; /* أقصى عرض للصور */
+  width: 100%;
   height: auto;
   margin-bottom: 20px;
+  display: block;
 }
 
 .productDetails h2 {
@@ -26,7 +29,8 @@
 
 .productDetails p {
   font-size: 16px;
-  color: #555;
+  color: #666;
+  line-height: 1.6;
 }
 
 /* القائمة */
@@ -51,7 +55,8 @@
   cursor: pointer;
   margin-bottom: 8px;
   position: relative;
-  transition: all 0.3s;
+  transition: background 0.3s, border-color 0.3s;
+  background: #fff;
 }
 
 .sidebar li::before {
@@ -62,14 +67,14 @@
   height: 100%;
   width: 5px;
   background: transparent;
-  transition: all 0.3s;
+  transition: background 0.3s;
 }
 
 .sidebar li:hover {
   background: #f9f9f9;
 }
 
-.sidebar li.active {
+.active {
   font-weight: 600;
   border-color: #c0392b;
 }
@@ -78,15 +83,23 @@
   background: #c0392b;
 }
 
+/* focus/active keyboard accessibility */
+.sidebar li:focus,
+.sidebar li:active {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
+}
+
 /* Responsive */
 @media (max-width: 991px) {
-  .container {
+  .mediaContainer {
     flex-direction: column;
   }
 
   .productImage {
-    width: 100%;
     max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .sidebar {

@@ -10,7 +10,7 @@ import Contact from "./pages/Contact/Contact";
 // استيراد الـ Header
 import Header from "./components/Header";
 // استيراد الـ Footer
-import Footer from "./components/footer/Footer.jsx";  // 👈 تأكد من المسار
+import Footer from "./components/footer/Footer.jsx"; 
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Header />
 
       {/* Pages */}
-      <div >
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

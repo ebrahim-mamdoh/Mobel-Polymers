@@ -1,12 +1,14 @@
+// src/components/footer/Footer.jsx
 import React from "react";
+import { Link } from "react-router-dom"; // 👈 استيراد Link
 import styles from "./Footer.module.css";
 import footerBg from "../../assets/footer-1.jpg";
 import logo from "../../assets/logo.svg";
-import { FaFacebookF, FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaPhone, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer 
+    <footer
       className={styles.footer}
       style={{ backgroundImage: `url(${footerBg})` }}
     >
@@ -15,10 +17,34 @@ export default function Footer() {
         <div className={styles.logoSection}>
           <img src={logo} alt="Mobel Polymers" className={styles.logo} />
           <div className={styles.socialIcons}>
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaYoutube /></a>
-            <a href="#"><FaInstagram /></a>
+            <a
+              href="https://www.facebook.com/mobel.polymers.9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/mobel-polymers/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="https://www.instagram.com/mobel.polymers/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+  href="tel:+201222115773"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaPhone /> 
+</a>
           </div>
         </div>
 
@@ -27,27 +53,51 @@ export default function Footer() {
           <div>
             <h4>About Us</h4>
             <ul>
-              <li><a href="#">Company Profile</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li>
+                <Link to="/about">Company Profile</Link>
+              </li>
+              <li>
+                <Link to="/media-center">Products</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h4>Media Center</h4>
             <ul>
-              <li><a href="#">Shows</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">News</a></li>
+              <li>
+                <Link to="/media-center">Shows</Link>
+              </li>
+              <li>
+                <Link to="/media-center">Projects</Link>
+              </li>
+              <li>
+                <Link to="/media-center">News</Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h4>Contact</h4>
             <ul>
-              <li><a href="#">Request Quotation</a></li>
-              <li><a href="#">Location</a></li>
-              <li><a href="#">E-mail</a></li>
+              <li>
+                <Link to="/contact">Request Quotation</Link>
+              </li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/iiy7Wo8cbZv5DoaH6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Location
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@mobelpolymers.net">E-mail</a>
+              </li>
             </ul>
           </div>
         </div>

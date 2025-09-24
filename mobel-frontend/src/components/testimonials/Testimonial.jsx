@@ -2,7 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import authorImg from "../../assets/testimonial-author.jpg"; // عدّل المسار لو لازم
+import author1 from "../../assets/user1.jpeg"; // عدّل المسار لو لازم
+import author2 from "../../assets/user2.jpeg"; // عدّل المسار لو لازم
+import author3 from "../../assets/user3.jpeg"; // عدّل المسار لو لازم
 import styles from "./Testimonial.module.css";
 
 export default function Testimonials() {
@@ -37,7 +39,7 @@ export default function Testimonials() {
                 “Working with your team was a great experience. The project was delivered on time, and the results exceeded our expectations. We truly recommend your services.
                 </p>
                 <div className={styles.author}>
-                  <img src={authorImg} alt="Claude David" />
+                  <img src={author1} alt="Claude David" />
                   <div className={styles.meta}>
                     <span className={styles.category}>Full Stack Master</span>
                     <h4>Claude David</h4>
@@ -50,7 +52,7 @@ export default function Testimonials() {
                 “We are very happy with the support and communication. Everything was smooth from start to finish, and the quality of work was outstanding. Highly professional service.
                 </p>
                 <div className={styles.author}>
-                  <img src={authorImg} alt="Thomas Jefferson" />
+                  <img src={author2} alt="Thomas Jefferson" />
                   <div className={styles.meta}>
                     <span className={styles.category}>UI Expert</span>
                     <h4>Thomas Jefferson</h4>
@@ -63,7 +65,7 @@ export default function Testimonials() {
                 “The collaboration was excellent from the first meeting. Every detail was handled carefully, and the outcome was better than what we imagined. Great job overall.
                 </p>
                 <div className={styles.author}>
-                  <img src={authorImg} alt="Stella Blair" />
+                  <img src={author3} alt="Stella Blair" />
                   <div className={styles.meta}>
                     <span className={styles.category}>Digital Animator</span>
                     <h4>Stella Blair</h4>
