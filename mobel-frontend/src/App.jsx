@@ -12,7 +12,18 @@ import Header from "./components/Header";
 // استيراد الـ Footer
 import Footer from "./components/footer/Footer.jsx"; 
 
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 function App() {
+    useEffect(() => {
+    AOS.init({
+      duration: 1000, // وقت الأنيميشن (ms)
+      once: true, // الأنيميشن يشتغل مرة واحدة بس
+    });
+  }, []);
   return (
     <div>
       {/* Navbar من الـ Header */}

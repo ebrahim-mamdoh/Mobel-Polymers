@@ -1,5 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./MediaCenter.module.css";
+
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // استبدل الصور دي باللي عندك في مجلد assets
 import bond from "../../assets/MediaCenter/bond.jpg";
@@ -59,9 +63,16 @@ const products = [
 export default function MediaCenter() {
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
 
+  // تفعيل AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <section className={styles.mediaCenter}>
-      {/* استخدمنا container من Bootstrap + كلاس الموديول */}
       <div className={`container ${styles.mediaContainer}`}>
         {/* تفاصيل المنتج */}
         <div className={styles.productDetails}>
@@ -69,13 +80,16 @@ export default function MediaCenter() {
             src={selectedProduct.image}
             alt={selectedProduct.name}
             className={styles.productImage}
+            data-aos="zoom-in"
           />
-          <h2>{selectedProduct.name}</h2>
-          <p>{selectedProduct.description}</p>
+          <h2 data-aos="fade-up">{selectedProduct.name}</h2>
+          <p data-aos="fade-up" data-aos-delay="200">
+            {selectedProduct.description}
+          </p>
         </div>
 
         {/* قائمة المنتجات */}
-        <aside className={styles.sidebar}>
+        <aside className={styles.sidebar} data-aos="fade-left">
           <h4>OUR PRODUCTS</h4>
           <ul>
             {products.map((product) => (
